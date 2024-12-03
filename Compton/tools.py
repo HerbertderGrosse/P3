@@ -83,7 +83,7 @@ def getfromtxt(file):
     dat = np.genfromtxt(file, skip_header = 1)
     x,y = dat.T
     return x,y   
-def integrate(x,y,mu, sig,const_offset=0,dat_name=None,func=None):
+def integrate(x,y,mu, sig,const_offset=0,dat_name=None,func=None,label=True):
 
     sig=np.abs(sig)    
     von = int((mu-1.5*sig)/2)
@@ -94,10 +94,16 @@ def integrate(x,y,mu, sig,const_offset=0,dat_name=None,func=None):
         dat = np.genfromtxt("./"+dat_name+ '.txt', skip_header = 1)
         x,y = dat.T    
     if func is None:
-        plt.fill_between(x[von:bis], y[von:bis], y2=const_offset, color = "green", alpha = 0.5,label="integrated area")
-
+        if label:
+            plt.fill_between(x[von:bis], y[von:bis], y2=const_offset, color = "green", alpha = 0.5, label="integrated area")
+        else:
+            plt.fill_between(x[von:bis], y[von:bis], y2=const_offset, color = "green", alpha = 0.5)
     else:
-        plt.fill_between(func(x[von:bis]), y[von:bis], y2=const_offset, color = "green", alpha = 0.5,label="integrated area")
+        if label:
+            plt.fill_between(func(x[von:bis]), y[von:bis], y2=const_offset, color = "green", alpha = 0.5, label="integrated area")
+        else:
+            plt.fill_between(func(x[von:bis]), y[von:bis], y2=const_offset, color = "green", alpha = 0.5)
+
     plt.xlabel('energy (chn)')
     plt.ylabel('no. of events')
     plt.grid()
@@ -106,7 +112,7 @@ def integrate(x,y,mu, sig,const_offset=0,dat_name=None,func=None):
     return np.sum(np.array(y[von:bis]-const_offset))
 
 
-def gauss_fit(x,y,beg_ch,end_ch,offset=0,func=None):
+def gauss_fit(x,y,beg_ch,end_ch,offset=0,func=None,label=True):
     def gauss (x,A,sigma,µ):
         return A/np.sqrt(2*np.pi*sigma**2)*np.exp(-(x-µ)**2/(2*sigma**2))
 
@@ -116,9 +122,17 @@ def gauss_fit(x,y,beg_ch,end_ch,offset=0,func=None):
         p_0 = [500, 30, (end_ch+beg_ch)/2,offset]
         par, cov= curve_fit(xdata = x[int(beg_ch/2):int(end_ch/2)], ydata = y[int(beg_ch/2):int(end_ch/2)], f =gauss_const, p0= p_0)
         if func is None:
-            plt.plot(x, gauss_const(x, par[0], par[1], par[2], par[3]),label="gauss fit with offset",color="orange")
+            if label:
+                plt.plot(x, gauss_const(x, par[0], par[1], par[2], par[3]),label="gauss fit with offset",color="orange")
+            else:
+                plt.plot(x, gauss_const(x, par[0], par[1], par[2], par[3]),color="orange")
+
         else:
-            plt.plot(func(x), gauss_const(x, par[0], par[1], par[2], par[3]),label="gauss fit with offset",color="orange")
+            if label:
+                plt.plot(func(x), gauss_const(x, par[0], par[1], par[2], par[3]),label="gauss fit with offset",color="orange")
+            else:
+                plt.plot(x, gauss_const(x, par[0], par[1], par[2], par[3]),color="orange")
+
         print("offset")
         return par[2], par[1],par[3]
     
@@ -126,9 +140,17 @@ def gauss_fit(x,y,beg_ch,end_ch,offset=0,func=None):
         p_0 = [500, 30, (end_ch+beg_ch)/2]
         par, cov= curve_fit(xdata = x[int(beg_ch/2):int(end_ch/2)], ydata = y[int(beg_ch/2):int(end_ch/2)], f =gauss, p0= p_0)
         if func is None:
-            plt.plot(x, gauss(x, par[0], par[1], par[2]),label="gauss fit",color="r")
+            if label:
+                plt.plot(x, gauss(x, par[0], par[1], par[2]),label="gauss fit",color="r")
+            else:
+                plt.plot(x, gauss(x, par[0], par[1], par[2]),color="r")
+
         else:
-            plt.plot(func(x), gauss(x, par[0], par[1], par[2]),label="gauss fit",color="r")
+            if label:
+                plt.plot(func(x), gauss(x, par[0], par[1], par[2]),label="gauss fit",color="r")
+            else:
+                plt.plot(func(x), gauss(x, par[0], par[1], par[2]),color="r")
+
 
         return par[2], par[1],0
 
