@@ -1,0 +1,440 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17164,        430]
+NotebookOptionsPosition[     16454,        409]
+NotebookOutlinePosition[     16861,        425]
+CellTagsIndexPosition[     16818,        422]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    FractionBox["A", 
+     RowBox[{"sigma", "*", 
+      SqrtBox[
+       RowBox[{"2", "*", "Pi"}]]}]], "*", 
+    RowBox[{"Exp", "[", 
+     RowBox[{"lamb", "*", "t"}], "]"}], "*", " ", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "1"}], "2"], "*", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"t", "-", "mu"}], "sigma"], ")"}], "2"]}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9432692312881393`*^9, 3.943269286268632*^9}, 
+   3.94326933870548*^9, {3.9432694033117886`*^9, 3.9432694654207907`*^9}, {
+   3.943269502607335*^9, 3.943269563418995*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"6fca7873-46d5-42a8-b381-e047a6fa0102"],
+
+Cell[BoxData[
+ TemplateBox[{
+   FractionBox[
+    RowBox[{"A", " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+         RowBox[{"lamb", " ", "mu"}], "+", 
+         FractionBox[
+          RowBox[{
+            SuperscriptBox["lamb", "2"], " ", 
+            SuperscriptBox["sigma", "2"]}], "2"]}]]}], 
+    RowBox[{
+      SqrtBox[
+       FractionBox["1", 
+        SuperscriptBox["sigma", "2"]]], " ", "sigma"}]], 
+   RowBox[{
+     RowBox[{"Re", "[", 
+       SuperscriptBox["sigma", "2"], "]"}], ">", "0"}]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{
+  3.9432692879816523`*^9, {3.94326955693359*^9, 3.9432695856531677`*^9}},
+ CellLabel->"Out[4]=",ExpressionUUID->"5a4fd790-d3bb-442e-bb1e-8496ba4e5448"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9432693140763965`*^9, 
+  3.9432693337617636`*^9}},ExpressionUUID->"92e295e2-1135-4e83-9b91-\
+e07c1a26b4ab"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    InterpretationBox[
+     StyleBox[
+      FrameBox[
+       DynamicModuleBox[{System`InformationDump`open$$ = True, 
+        System`InformationDump`mouseOver$$ = False}, 
+        PaneSelectorBox[{True->
+         TagBox[GridBox[{
+            {
+             ItemBox[
+              PaneBox[
+               StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+                StripOnInput->False,
+                BaseStyle -> None],
+               FrameMargins->{{4, 0}, {-1, 1}}],
+              BaseStyle->"InformationTitleBackground",
+              StripOnInput->False], 
+             ItemBox[
+              PaneBox[
+               TooltipBox[
+                ButtonBox[
+                 PaneSelectorBox[{False->
+                  
+                  DynamicBox[FEPrivate`FrontEndResource[
+                   "FEBitmaps", "InformationHelpIcon"],
+                   ImageSizeCache->{13., {4., 9.}}], True->
+                  
+                  DynamicBox[FEPrivate`FrontEndResource[
+                   "FEBitmaps", "InformationHelpIconHot"],
+                   ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                   CurrentValue["MouseOver"]]],
+                 Appearance->None,
+                 BaseStyle->"Link",
+                 
+                 ButtonData->
+                  "http://reference.wolfram.com/language/ref/\
+NormalDistribution.html",
+                 
+                 ButtonNote->
+                  "http://reference.wolfram.com/language/ref/\
+NormalDistribution.html"],
+                
+                "\"http://reference.wolfram.com/language/ref/\
+NormalDistribution.html\""],
+               FrameMargins->{{0, 4}, {0, 2}}],
+              BaseStyle->"InformationTitleBackground",
+              StripOnInput->False]},
+            {
+             ItemBox[
+              PaneBox[
+               
+               StyleBox["\<\"\\!\\(\\*RowBox[{\\\"NormalDistribution\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"\[Mu]\\\", \\\"TR\\\"], \\\",\\\", \
+StyleBox[\\\"\[Sigma]\\\", \\\"TR\\\"]}], \\\"]\\\"}]\\) represents a normal \
+(Gaussian) distribution with mean \\!\\(\\*StyleBox[\\\"\[Mu]\\\", \
+\\\"TR\\\"]\\) and standard deviation \\!\\(\\*StyleBox[\\\"\[Sigma]\\\", \
+\\\"TR\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"NormalDistribution\\\", \\\"[\\\", \
+\\\"]\\\"}]\\) represents a normal distribution with zero mean and unit \
+standard deviation.\"\>", "InformationUsageText",
+                StripOnInput->False,
+                LineSpacing->{1.5, 1.5, 3.}],
+               FrameMargins->{{10, 10}, {8, 10}}],
+              BaseStyle->"InformationUsageSubtitleBackground",
+              StripOnInput->False], 
+             ItemBox["\<\"\"\>",
+              BaseStyle->"InformationUsageSubtitleBackground",
+              StripOnInput->False]},
+            {
+             PaneBox[GridBox[{
+                {
+                 
+                 DynamicModuleBox[{System`InformationDump`open$$ = {
+                  False, False, False, False, False, False}}, 
+                  StyleBox[GridBox[{
+                    {
+                    TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                    TemplateBox[{
+                    TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/\
+NormalDistribution.html"], None}, 
+                    "http://reference.wolfram.com/language/ref/\
+NormalDistribution.html", "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                    {
+                    TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                    RowBox[{"{", 
+                    RowBox[{"Protected", ",", "ReadProtected"}], "}"}]},
+                    {
+                    TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`NormalDistribution\"\>"}
+                    },
+                    AutoDelete->False,
+                    GridBoxAlignment->{"Columns" -> {Right, Left}},
+                    GridBoxDividers->None,
+                    GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                    GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                   StripOnInput->False],
+                  DynamicModuleValues:>{}]}
+               },
+               DefaultBaseStyle->"Column",
+               GridBoxAlignment->{"Columns" -> {{Left}}},
+               GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+               
+               GridBoxItemSize->{
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+               GridBoxSpacings->{"Columns" -> {
+                   Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                   Offset[0.27999999999999997`]}, "Rows" -> {
+                   Offset[0.2], {
+                    Offset[3.6]}, 
+                   Offset[0.2]}}],
+              FrameMargins->{{6, 6}, {6, 3}}], ""},
+            {
+             ItemBox[
+              TagBox[
+               ButtonBox[
+                PaneSelectorBox[{False->
+                 
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "UpPointerOpener"],
+                  ImageSizeCache->{10., {3., 7.}}], True->
+                 
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "UpPointerOpenerHot"],
+                  ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+                 System`InformationDump`mouseOver$$]],
+                Alignment->Left,
+                Appearance->{"Default" -> None},
+                
+                ButtonFunction:>FEPrivate`Set[
+                 System`InformationDump`open$$, False],
+                Evaluator->Automatic,
+                FrameMargins->{{9, 0}, {0, 0}},
+                ImageMargins->0,
+                ImageSize->Full,
+                Method->"Preemptive"],
+               
+               EventHandlerTag[{
+                "MouseEntered" :> 
+                 FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+                 "MouseExited" :> 
+                 FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+                 Method -> "Preemptive", PassEventsDown -> Automatic, 
+                 PassEventsUp -> True}]],
+              BaseStyle->"InformationTitleBackground",
+              StripOnInput->False], "\[SpanFromLeft]"}
+           },
+           AutoDelete->False,
+           FrameStyle->Directive[
+             GrayLevel[0.8], 
+             Thickness[Tiny]],
+           
+           GridBoxAlignment->{
+            "Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+           
+           GridBoxDividers->{
+            "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+          "Grid"], False->
+         TagBox[GridBox[{
+            {
+             ItemBox[
+              PaneBox[
+               StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+                StripOnInput->False],
+               FrameMargins->{{4, 0}, {-1, 1}}],
+              BaseStyle->"InformationTitleBackground",
+              StripOnInput->False], 
+             ItemBox[
+              PaneBox[
+               TooltipBox[
+                ButtonBox[
+                 PaneSelectorBox[{False->
+                  
+                  DynamicBox[FEPrivate`FrontEndResource[
+                   "FEBitmaps", "InformationHelpIcon"],
+                   ImageSizeCache->{13., {4., 9.}}], True->
+                  
+                  DynamicBox[FEPrivate`FrontEndResource[
+                   "FEBitmaps", "InformationHelpIconHot"],
+                   ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                   CurrentValue["MouseOver"]]],
+                 Appearance->None,
+                 BaseStyle->"Link",
+                 
+                 ButtonData->
+                  "http://reference.wolfram.com/language/ref/\
+NormalDistribution.html",
+                 
+                 ButtonNote->
+                  "http://reference.wolfram.com/language/ref/\
+NormalDistribution.html"],
+                
+                "\"http://reference.wolfram.com/language/ref/\
+NormalDistribution.html\""],
+               FrameMargins->{{0, 4}, {0, 2}}],
+              BaseStyle->"InformationTitleBackground",
+              StripOnInput->False]},
+            {
+             ItemBox[
+              PaneBox[
+               
+               StyleBox["\<\"\\!\\(\\*RowBox[{\\\"NormalDistribution\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"\[Mu]\\\", \\\"TR\\\"], \\\",\\\", \
+StyleBox[\\\"\[Sigma]\\\", \\\"TR\\\"]}], \\\"]\\\"}]\\) represents a normal \
+(Gaussian) distribution with mean \\!\\(\\*StyleBox[\\\"\[Mu]\\\", \
+\\\"TR\\\"]\\) and standard deviation \\!\\(\\*StyleBox[\\\"\[Sigma]\\\", \
+\\\"TR\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"NormalDistribution\\\", \\\"[\\\", \
+\\\"]\\\"}]\\) represents a normal distribution with zero mean and unit \
+standard deviation.\"\>", "InformationUsageText",
+                StripOnInput->False,
+                LineSpacing->{1.5, 1.5, 3.}],
+               FrameMargins->{{10, 10}, {8, 10}}],
+              BaseStyle->"InformationUsageSubtitleBackground",
+              StripOnInput->False], 
+             ItemBox["\<\"\"\>",
+              BaseStyle->"InformationUsageSubtitleBackground",
+              StripOnInput->False]},
+            {
+             ItemBox[
+              TagBox[
+               ButtonBox[
+                PaneSelectorBox[{False->
+                 
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "DownPointerOpener"],
+                  ImageSizeCache->{10., {3., 7.}}], True->
+                 
+                 DynamicBox[FEPrivate`FrontEndResource[
+                  "FEBitmaps", "DownPointerOpenerHot"],
+                  ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+                 System`InformationDump`mouseOver$$]],
+                Alignment->Left,
+                Appearance->{"Default" -> None},
+                
+                ButtonFunction:>FEPrivate`Set[
+                 System`InformationDump`open$$, True],
+                Evaluator->Automatic,
+                FrameMargins->{{9, 0}, {0, 0}},
+                ImageMargins->0,
+                ImageSize->Full,
+                Method->"Preemptive"],
+               
+               EventHandlerTag[{
+                "MouseEntered" :> 
+                 FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+                 "MouseExited" :> 
+                 FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+                 Method -> "Preemptive", PassEventsDown -> Automatic, 
+                 PassEventsUp -> True}]],
+              BaseStyle->"InformationTitleBackground",
+              StripOnInput->False], "\[SpanFromLeft]"}
+           },
+           AutoDelete->False,
+           FrameStyle->Directive[
+             GrayLevel[0.8], 
+             Thickness[Tiny]],
+           
+           GridBoxAlignment->{
+            "Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+           
+           GridBoxDividers->{
+            "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+          "Grid"]}, Dynamic[System`InformationDump`open$$],
+         BaselinePosition->Baseline,
+         FrameMargins->0,
+         ImageSize->Automatic],
+        DynamicModuleValues:>{}],
+       BaseStyle->"InformationGridFrame",
+       StripOnInput->False], "InformationGridPlain",
+      StripOnInput->False],
+     InformationData[<|
+      "ObjectType" -> "Symbol", "Usage" -> 
+       "\!\(\*RowBox[{\"NormalDistribution\", \"[\", RowBox[{StyleBox[\"\[Mu]\
+\", \"TR\"], \",\", StyleBox[\"\[Sigma]\", \"TR\"]}], \"]\"}]\) represents a \
+normal (Gaussian) distribution with mean \!\(\*StyleBox[\"\[Mu]\", \"TR\"]\) \
+and standard deviation \!\(\*StyleBox[\"\[Sigma]\", \"TR\"]\).\n\
+\!\(\*RowBox[{\"NormalDistribution\", \"[\", \"]\"}]\) represents a normal \
+distribution with zero mean and unit standard deviation.", 
+       "Documentation" -> <|
+        "Web" -> 
+         "http://reference.wolfram.com/language/ref/NormalDistribution.html"|>\
+, "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, "SubValues" -> 
+       None, "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> 
+       None, "Options" -> None, "Attributes" -> {Protected, ReadProtected}, 
+       "FullName" -> "System`NormalDistribution"|>, False]], "}"}], ",", 
+   RowBox[{"{", "\[Placeholder]", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9432693196473427`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"f421f26e-92b4-4a1c-bd57-e0ba5fe5a5d1"]
+}, Open  ]]
+},
+WindowSize->{571.8, 524.4},
+WindowMargins->{{284.4, Automatic}, {18, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a920bde6-8ebb-4548-af16-a9660b1fe13c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 877, 24, 113, "Input",ExpressionUUID->"6fca7873-46d5-42a8-b381-e047a6fa0102"],
+Cell[1460, 48, 728, 21, 115, "Output",ExpressionUUID->"5a4fd790-d3bb-442e-bb1e-8496ba4e5448"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2225, 74, 156, 3, 28, "Input",ExpressionUUID->"92e295e2-1135-4e83-9b91-e07c1a26b4ab"],
+Cell[2384, 79, 14054, 327, 235, "Output",ExpressionUUID->"f421f26e-92b4-4a1c-bd57-e0ba5fe5a5d1"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
